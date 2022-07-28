@@ -1,19 +1,52 @@
-const numberOfFilms= +prompt('Сколько фильмов вы уже посмотрели?','');
+// lesson19
+// const numberOfFilms= +prompt('Сколько фильмов вы уже посмотрели?','');
 
-const personalMoviesDB = {
-    count:  numberOfFilms,   
-    movies: {},
-    actors: {},
-    genres:{},
-    privat: false
-};
+// const personalMoviesDB = {
+//     count:  numberOfFilms,   
+//     movies: {},
+//     actors: {},
+//     genres:{},
+//     privat: false
+// };
 
-const a= prompt('Один из просмотреных фильмов?',''),
-    b= prompt('Как оцените его?',''),
-    c= prompt('Один из просмотреных фильмов?',''),
-    d= prompt('Один из просмотреных фильмов?','');
+// const a= prompt('Один из просмотреных фильмов?',''),
+//     b= prompt('Как оцените его?',''),
+//     c= prompt('Один из просмотреных фильмов?',''),
+//     d= prompt('Как оцените его?','');
 
-personalMoviesDB.movies[a] = b;
-personalMoviesDB.movies[c] = d;
+// personalMoviesDB.movies[a] = b;
+// personalMoviesDB.movies[c] = d;
 
-console.log(personalMoviesDB);
+// console.log(personalMoviesDB);
+
+// lesson20
+
+'use strict'
+if (4==4) {
+    console.log('OK!');
+}
+    else {
+        console.log('Error!');
+    }
+
+    const num = 50;
+
+
+    // тернарный оператор
+
+    // (num === 50) ? console.log('Ok!') : console.log("Error");
+
+    switch (num) {
+        case 49:
+           console.log('Неверно');
+            break; 
+        case 100:
+            console.log('Неверно');
+            break;
+        case 50:
+                console.log('в точку');
+                break;
+        default:
+            console.log("не в этот раз");
+            break;
+    }
