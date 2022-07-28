@@ -21,32 +21,52 @@
 
 // lesson20
 
-'use strict'
-if (4==4) {
-    console.log('OK!');
+// 'use strict'
+// if (4==4) {
+//     console.log('OK!');
+// }
+//     else {
+//         console.log('Error!');
+//     }
+
+//     const num = 51;
+
+
+//     // тернарный оператор
+
+//     // (num === 50) ? console.log('Ok!') : console.log("Error");
+
+//     switch (num) {
+//         case 49:
+//            console.log('Неверно');
+//             break; 
+//         case 100:
+//             console.log('Неверно');
+//             break;
+//         case 50:
+//                 console.log('в точку');
+//                 break;
+//         default:
+//             console.log("не в этот раз");
+//             break;
+//     
+// lesson20
+
+// const hamburger = 5:
+// const fries = 0;
+
+// if(hamburger&&fries){
+//     console.log('Ясыт');
+// }
+
+
+const hamburger = 3;
+const fries = 1;
+const cola = 0;
+
+if(hamburger ===3 cola === 1 && fries){
+    console.log('Ясыт');
 }
-    else {
-        console.log('Error!');
-    }
-
-    const num = 50;
-
-
-    // тернарный оператор
-
-    // (num === 50) ? console.log('Ok!') : console.log("Error");
-
-    switch (num) {
-        case 49:
-           console.log('Неверно');
-            break; 
-        case 100:
-            console.log('Неверно');
-            break;
-        case 50:
-                console.log('в точку');
-                break;
-        default:
-            console.log("не в этот раз");
-            break;
-    }
+else{
+    console.log('Голод')
+}
