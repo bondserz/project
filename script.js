@@ -60,13 +60,66 @@
 // }
 
 
-const hamburger = 3;
-const fries = 1;
-const cola = 0;
+// const hamburger = 3;
+// cost fries = 1;
+// const cola = 0;
 
-if(hamburger ===3 cola === 1 && fries){
-    console.log('Ясыт');
-}
-else{
-    console.log('Голод')
-}
+// console.log(hamburger ===3 cola && fries)
+
+
+
+// if(hamburger ===3 cola === 1 && fries){
+//     console.log('Ясыт');
+// }
+// else{
+//     console.log('Голод')
+// }
+
+// const hamburger = 1;
+// const fries = 0;
+// const cola = 0;
+// const nuggets = 2;
+
+// if(hamburger || cola || fries && nuggets)
+// {
+//     console.log('все довольны');
+// }    else {
+//         console.log("мы уходим");
+//     }
+
+// console.log(hamburger || cola  || fries || nuggets)
+
+
+// const hamburger = 3;
+// const fries = 3;
+// const cola = 0;
+// const nuggets = 2;
+
+// if(hamburger ===3 && cola ===2 || fries ===3  && nuggets)
+// {
+// //     console.log('все довольны');
+// // }    else {
+//         console.log("мы уходим");
+//     }
+
+// console.log(hamburger ===3 && cola ===2 || fries ===3  && nuggets)
+
+
+
+
+// console.log( NaN || 2 || undefined );
+
+// console.log( NaN && 2 && undefined );
+
+// console.log( 1 && 2 && 3 );
+
+
+// const hamburger = 3;
+// const fries = 3;
+// const cola = 1;
+// const nuggets = 2;
+ 
+// if (hamburger === 3 && cola || fries === 3 && nuggets) {
+//    console.log(hamburger === 3 && cola)
+// }
+
