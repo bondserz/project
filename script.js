@@ -122,4 +122,4 @@
 // if (hamburger === 3 && cola || fries === 3 && nuggets) {
 //    console.log(hamburger === 3 && cola)
 // }
-
+console.log( !1 && 2 || !3 );
