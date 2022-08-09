@@ -671,73 +671,229 @@
 
 
 // lesson29
-let numberOfFilms;
+// let numberOfFilms;
 
 
-function start(){
-    numberOfFilms= +prompt('Сколько фильмов вы уже посмотрели?','');
+// function start(){
+//     numberOfFilms= +prompt('Сколько фильмов вы уже посмотрели?','');
 
-    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)){
-        numberOfFilms= +prompt('Сколько фильмов вы уже посмотрели?','');
-    }
-}
-start();
-    const personalMoviesDB = {
-        count:  numberOfFilms,   
-        movies: {},
-        actors: {},
-        genres:[],
-        privat: false
-    };
+//     while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)){
+//         numberOfFilms= +prompt('Сколько фильмов вы уже посмотрели?','');
+//     }
+// }
+// start();
+//     const personalMoviesDB = {
+//         count:  numberOfFilms,   
+//         movies: {},
+//         actors: {},
+//         genres:[],
+//         privat: false
+//     };
 
 
-    function rememberMyFilms(){
-        for (let i = 0; i < 2; i++){
-            const a= prompt('Один из просмотреных фильмов?',''),
-                b= +prompt('Как оцените его?','');
+//     function rememberMyFilms(){
+//         for (let i = 0; i < 2; i++){
+//             const a= prompt('Один из просмотреных фильмов?',''),
+//                 b= +prompt('Как оцените его?','');
     
-                if (a != null && b != null && a != '' && b != ' && ' && a.length < 50) {
-                    personalMoviesDB.movies[a] = b;
-                    console.log ('done');
-                } else {
-                    console.log('errror');
-                    i--;
-                }
+//                 if (a != null && b != null && a != '' && b != ' && ' && a.length < 50) {
+//                     personalMoviesDB.movies[a] = b;
+//                     console.log ('done');
+//                 } else {
+//                     console.log('errror');
+//                     i--;
+//                 }
     
         
-        }
+//         }
 
+//     }
+//     rememberMyFilms();
+
+//     function detectPPersonalLevel(){
+//         if (personalMoviesDB.count < 10) {
+//             console.log('Мало');
+//             } else if (personalMoviesDB.count < 30 && personalMoviesDB.count >= 10){
+//                 console.log('Normalno');
+//             } else if (personalMoviesDB.count >= 30){
+//                 console.log('ZBS');
+//             }else { 
+//                 console.log("Errror");
+//             }
+//     }
+//     detectPPersonalLevel();
+
+//     function showMyDB(hidden){
+//         if (!hidden){
+//             console.log(personalMoviesDB);
+//         }
+        
+
+//     }
+//     showMyDB(personalMoviesDB.privat);
+
+//     function writeYourGenres(){
+//         for (let i = 1; i <= 3; i++){
+        
+//             personalMoviesDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);
+//         }
+//     }
+//     writeYourGenres();
+
+// console.log(personalMoviesDB);
+
+    //task1lesson29
+
+// function  calculetedVolumeAndArea(){
+//     let a = +prompt('число');
+//     if ((a == '' || a == null || isNaN(a)) )
+//     console.log("Error");
+//     else {
+//         let volume = a * a * a;
+//         let area = a * a * 6;
+//         console.log(volume, area);
+//     }
+// } 
+// calculetedVolumeAndArea();
+
+    // task2lesson29
+    // function getCoupeNumber() {
+    //     let a = prompt("место номер?");
+
+    //     let result = a / 4;
+
+    //     if (a <= 0 ||  a >= 36){
+    //         console.log ("Таких мест не существует");
+
+    //     }else if (isNaN(a)  || a < 0 || Number.isInteger(a)){
+    //         console.log("Проверьте правильность ввода");
+    //         console.log(typeof(a) !== 'number');
+    //         console.log(a < 0);
+    //         console.log(Number.isInteger(a));
+
+            
+    //     }else{
+    //         let result = a / 4;
+    //          console.log(`Ваше купе номер ${Math.ceil(result)}`);
+    //     }
+
+        
+
+    // }
+    // getCoupeNumber();
+
+    // task3lrsson29
+//     function getTimeFromMinutes() {
+//         let m = +prompt('Введите минуты');
+//             let hours = m / 60;
+//                 if (isNaN(m) || m < 0 || m%1 > 0 ){
+//             console.log("Ошибка, проверьте данные");
+//         }else if (m <=59){
+//             console.log(`${m}минут`);
+//         }else if (hours < 4 || hours > 1){
+//             let hours = m / 60;
+//             let minutes = m - Math.floor(hours) * 60;
+//             console.log(`${Math.floor(hours)} часа и ${minutes}минут`);
+//         }else if (hours >= 5){
+//             let hours = m / 60;
+//             let minutes = m - Math.floor(hours) * 60;
+//             console.log(`${Math.floor(hours)} часов и ${minutes}минут`);
+//         }else if (hours = 1){
+//             let hours = m / 60;
+//             let minutes = m - Math.floor(hours) * 60;
+//             console.log(`${Math.floor(hours)} час и ${minutes}минут`);
+//         console.log(isNaN(m));
+//         console.log(m < 0);
+//         console.log(Number.isInteger(m));
+
+
+//     }
+// }
+//     getTimeFromMinutes();
+
+// tesk4lsson29
+    // function findMaxNumber(a, b, c, d) {
+    // //   let num = findMaxNumber.length;
+    // //   console.log (num);
+    //     if (isNaN(a , b, c, d)){
+    //         console.log (0);
+    //     }else{
+    //         console.log (Math.max(a, b, c, d));
+    //     }       
+    // }
+    // findMaxNumber(1,  -9, 'ff', 33);
+    // task5lesson29
+    // function fib(m) {
+    //     let num = [0, 1];
+               
+    //     for(let i = 2; i <= m; i++){
+    //         let m1 = num[i -1];
+    //         let m2 = num[i- 2];
+
+    //         num.push(m1);
+           
+
+    //     }
+        
+
+    // }
+    // fib(5);
+
+   
+  
+    // if (m = 1){
+    //     console.log(0);
+    //   }else if(isNaN(m) || m > 0 || Number.isInteger(m) ){
+    //      console.log( );
+    //   }else{
+    //     console.log("---");
+    //    }
+    // lesson30, 31
+    // function learnjs(lang, callback){
+    //     console.log(`я учу: ${lang}`);
+    //     callback();
+    // }
+    // function done(){
+    //     console.log('Я прошел этот урок!');
+    // }
+
+    // learnjs('JavaScript', done);
+
+    // lesson32
+const options = {
+    name: 'test',
+    widht: 1024,
+    height: 1024,
+    colors: {
+        border: 'black',
+        bg: 'red'
+    },
+    // прототип объекта (создание своего метода объекта, которого нет в JS)
+    makeTest: function(){
+        console.log('TEST  ');
     }
-    rememberMyFilms();
+};
+options.makeTest();
+    // получение значение вложенных в объекты 
+const {border, bg} = options.colors;
+console.log(border);
+// console.log(options.name);
 
-    function detectPPersonalLevel(){
-        if (personalMoviesDB.count < 10) {
-            console.log('Мало');
-            } else if (personalMoviesDB.count < 30 && personalMoviesDB.count >= 10){
-                console.log('Normalno');
-            } else if (personalMoviesDB.count >= 30){
-                console.log('ZBS');
-            }else { 
-                console.log("Errror");
+// delete options.name;
+
+// console.log(options);
+
+
+for (let key in options){
+    if (typeof(options[key]) === 'object'){
+            for (let i in options[key]){
+                console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
             }
+    }else{
+        console.log(`Свойство ${key} имеет значение ${options[key]}`);
     }
-    detectPPersonalLevel();
+    
 
-    function showMyDB(hidden){
-        if (!hidden){
-            console.log(personalMoviesDB);
-        }
-        
+}
+console.log(Object.keys(options).length);
 
-    }
-    showMyDB(personalMoviesDB.privat);
-
-    function writeYourGenres(){
-        for (let i = 1; i <= 3; i++){
-        
-            personalMoviesDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);
-        }
-    }
-    writeYourGenres();
-
-    // console.log(personalMoviesDB);
