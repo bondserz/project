@@ -860,23 +860,23 @@
     // learnjs('JavaScript', done);
 
     // lesson32
-const options = {
-    name: 'test',
-    widht: 1024,
-    height: 1024,
-    colors: {
-        border: 'black',
-        bg: 'red'
-    },
-    // прототип объекта (создание своего метода объекта, которого нет в JS)
-    makeTest: function(){
-        console.log('TEST  ');
-    }
-};
-options.makeTest();
-    // получение значение вложенных в объекты 
-const {border, bg} = options.colors;
-console.log(border);
+// const options = {
+//     name: 'test',
+//     widht: 1024,
+//     height: 1024,
+//     colors: {
+//         border: 'black',
+//         bg: 'red'
+//     },
+//     // прототип объекта (создание своего метода объекта, которого нет в JS)
+//     makeTest: function(){
+//         console.log('TEST  ');
+//     }
+// };
+// options.makeTest();
+//     // получение значение вложенных в объекты 
+// const {border, bg} = options.colors;
+// console.log(border);
 // console.log(options.name);
 
 // delete options.name;
@@ -884,16 +884,199 @@ console.log(border);
 // console.log(options);
 
 
-for (let key in options){
-    if (typeof(options[key]) === 'object'){
-            for (let i in options[key]){
-                console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
-            }
-    }else{
-        console.log(`Свойство ${key} имеет значение ${options[key]}`);
-    }
+// for (let key in options){
+//     if (typeof(options[key]) === 'object'){
+//             for (let i in options[key]){
+//                 console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
+//             }
+//     }else{
+//         console.log(`Свойство ${key} имеет значение ${options[key]}`);
+//     }
     
 
+// }
+// console.log(Object.keys(options).length);
+
+    // lesson33Массивы и псевдомассивы
+// const arr = [1, 12, 3, 44, 6, 18, 10];
+// arr.sort(compareNum);
+// console.log(arr);
+
+// function compareNum(a, b){
+//     return a - b;
+// }
+// arr[99] = 0;
+// console.log(arr.length);
+// console.log(arr);
+// удалить последний элемент
+// arr.pop();
+    // перебор массива
+// arr.forEach(function (item, i, arr){
+//     console.log(`${i}: ${item} внутри массива ${arr}`);
+// });
+
+// добавить в конец  массива
+// arr.push(10);
+
+
+
+// console.log(arr);
+        // перебор элеметов массива
+// for (let i = 0; i < arr.length; i++){
+//     console.log(arr[i]);
+// }
+        // перебор значений массива 
+// for (let value of arr) {
+//     console.log(value);
+// }
+
+// const str = prompt("", "");
+//     // разбивает объект   на массив строк путём разделения строки указанной подстрокой 
+// const products = str.split(",");
+//     // сортировка по алфавиту
+// products.sort();
+//     // Метод join() объединяет все элементы массива (или массивоподобного объекта) в строку.
+// console.log(products.join(','));
+
+    // lesson35 передача по ссылке или по значению, Spread
+// let a = 5,
+//     b = a;
+
+// b = b + 5;
+
+//     console.log(b);
+//     console.log(a);
+
+// const obj = {
+//     a: 5,
+//     b: 1
+// };
+
+// const copy = obj;// передает ссылку
+
+// copy.a = 10;
+
+// console.log(copy);
+// console.log(obj);
+
+
+// function copy(mainObj){
+//     let objCopy = {};
+
+//     let key;
+//     for (key in mainObj){
+//         objCopy[key] = mainObj[key];
+//         }
+
+//         return objCopy;
+// }
+
+// const numbers = {
+//     a: 2,
+//     b: 5,
+//     c: {
+//         x: 7,
+//         y: 4
+//     }
+// };
+
+// const newNumbers = copy(numbers);
+
+// newNumbers.a = 10;
+
+// // console.log(newNumbers);
+// // console.log(numbers);
+
+//     //объединение объектов
+// const add = {
+//     d: 17,
+//     e:  20
+// };
+
+// console.log(Object.assign({numbers}, add));
+
+// const clone = Object.assign({}, add);
+// clone.d = 20;
+
+// // console.log(add);
+// // console.log(clone);
+
+// const oldArr = ['a', 'b', 'c' ];
+// const newArr = oldArr.slice();
+
+// newArr[1] = 'asdasdasd';
+// console.log(newArr);
+// console.log(oldArr);
+
+// const video = ['youtube', 'vimeo', 'pornhub',],
+//     blogs = ['wordpress', 'livejournal','blogger'],
+//     internet = [...video, ...blogs, 'fb', 'HH'];
+
+//     console.log(internet);
+
+//     function log(a, b, c){
+//         console.log(a);
+//         console.log(b);
+//         console.log(c);
+//     }
+//     const num = [2, 5, 7];
+
+//     log(...num);
+
+//     const q = {
+//         one: 1,
+//         two: 2
+//     };
+//     const newObj = {...q};
+//     console.log(newObj);
+
+    //tasks1-3lesson35
+    // const personalPlanPeter = {
+    //     name: "Peter",
+    //     age: "29",
+    //     skills: {
+    //         languages: ['ru', 'eng'],
+    //         programmingLangs: {
+    //             js: '20%',
+    //             php: '10%'
+    //         },
+    //         exp: '1 month'
+    //     }
+    // };
+    
+    // function showExperience(plan) {
+        
+    //     console.log(plan.skills.exp);
+    // }
+    // showExperience(personalPlanPeter);
+
+
+    // function showProgrammingLangs(plan) {
+    //     let x = plan.skills.programmingLangs;
+    //         for(let value of Object.entries(x)){
+    //        console.log(`язык${value[0]}, ${value[1]}`);
+    //     }
+    //         }
+    // showProgrammingLangs(personalPlanPeter);
+
+
+    // personalPlanPeter.showAgeAndLangs = function(){
+    //     console.log(`Мне ${personalPlanPeter.age} и я владею ${personalPlanPeter.skills.languages.join("!").toUpperCase()}`);
+        
+    // };
+    // personalPlanPeter.showAgeAndLangs();
+
+
+    const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+
+function showFamily(arr) {
+    
 }
-console.log(Object.keys(options).length);
+
+const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+
+function standardizeStrings(arr) {
+    
+}
+
 
