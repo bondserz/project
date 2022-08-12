@@ -1067,16 +1067,66 @@
     // personalPlanPeter.showAgeAndLangs();
 
 
-    const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+//     const family = ['Peter', 'Ann', 'Alex', 'Linda'];
 
-function showFamily(arr) {
+// function showFamily(arr) {
+//     console.log(`Моя семья состоит из ${arr.join(' ')}`);
+   
+// }
+// showFamily(family);
+
+
+
+// const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+
+// function standardizeStrings(arr) {
+
+//     console.log(arr.join('\n').toLowerCase());
     
+// }
+// standardizeStrings(favoriteCities);
+
+
+  //tasks1-4lesson35
+
+// const someString = 'This is some strange string';
+
+// function reverse(str) {
+
+//     console.log(Array.from(str).reverse().join(''));
+
+
+//     // let arr = [];
+//     // for (let i = 0; i < str.length; i++){
+//     //     arr.push(str[str.length-1-i]);
+//     //     }
+//     // console.log(arr.join(''));
+// }
+
+// reverse(someString);
+
+
+
+  //tasks1-5lesson35
+const baseCurrencies = ['USD', '  EUR   '];
+const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+
+function availableCurr(arr, missingCurr) {
+     arr.forEach(function(value){
+        missingCurr.forEach(function(value2){
+            if (value == value2){
+                arr.splice(arr.indexOf(value), 1);
+            } 
+        });
+
+    });
+    if (arr == ''){  //(arr.length == 0)
+        console.log('No money');
+      
+    }else{console.log(`Доступные валюты:\n${arr.join('\n').trim()}`);}
+
 }
+availableCurr(baseCurrencies, additionalCurrencies);
 
-const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
-
-function standardizeStrings(arr) {
-    
-}
-
+          
 
