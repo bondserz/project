@@ -1108,25 +1108,265 @@
 
 
   //tasks1-5lesson35
-const baseCurrencies = ['USD', '  EUR   '];
-const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+// const baseCurrencies = ['USD', '  EUR   '];
+// const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
 
-function availableCurr(arr, missingCurr) {
-     arr.forEach(function(value){
-        missingCurr.forEach(function(value2){
-            if (value == value2){
-                arr.splice(arr.indexOf(value), 1);
-            } 
-        });
+// function availableCurr(arr, missingCurr) {
+//      arr.forEach(function(value){
+//         missingCurr.forEach(function(value2){
+//             if (value == value2){
+//                 arr.splice(arr.indexOf(value), 1);
+//             } 
+//         });
 
-    });
-    if (arr == ''){  //(arr.length == 0)
-        console.log('No money');
+//     });
+//     if (arr == ''){  //(arr.length == 0)
+//         console.log('No money');
       
-    }else{console.log(`Доступные валюты:\n${arr.join('\n').trim()}`);}
+//     }else{console.log(`Доступные валюты:\n${arr.join('\n').trim()}`);}
 
-}
-availableCurr(baseCurrencies, additionalCurrencies);
+// }
+// availableCurr(baseCurrencies, additionalCurrencies);
 
           
+    // lesson_36
 
+// let str = "some",
+//     strObj = new String(str);
+
+// // console.log(typeof(str));
+// // console.log(typeof(strObj));
+
+// // console.dir([1,2,3]);
+
+// const   soldier = {
+//     health: 400,
+//     armor: 100,
+//     sayHEllo: function(){
+//         console.log("Hello");
+//     }
+// };
+
+
+// const join = Object.create(soldier);
+// // const jonh = {
+// //     health:100
+// // };
+
+// // jonh.__proto__ = soldier; // устаревший вариант
+
+// Object.setPrototypeOf(jonh, soldier); //
+// console.log(jonh.armor);
+// jonh.sayHEllo();
+
+    // lesson37
+
+// "use struct";
+
+
+// const personalMoviesDB = {
+//     count:  0,   
+//     movies: {},
+//     actors: {},
+//     genres:[],
+//     privat: false,
+//     start: function(){
+//         personalMoviesDB.count= +prompt('Сколько фильмов вы уже посмотрели?','');
+//         while (personalMoviesDB.count == '' || personalMoviesDB.count == null || isNaN(personalMoviesDB.count)){
+//             personalMoviesDB.count= +prompt('Сколько фильмов вы уже посмотрели?','');
+        
+//         }
+//     },
+    
+//     rememberMyFilms: function(){
+//         for (let i = 0; i < 2; i++){
+//             const a= prompt('Один из просмотреных фильмов?',''),
+//                 b= prompt('Как оцените его?','');
+
+//                 if (a != null && b != null && a != '' && b != ' && ' && a.length < 50) {
+//                     personalMoviesDB.movies[a] = b;
+//                     console.log ('done');
+//                 } else {
+//                     console.log('errror');
+//                     i--;
+//                 }
+
+//          }
+
+//     },
+
+//     detectMyPersonalLevel: function(){
+//         if (personalMoviesDB.count < 10) {
+//             console.log('Мало');
+//             } else if (personalMoviesDB.count < 30 && personalMoviesDB.count >= 10){
+//                 console.log('Normalno');
+//             } else if (personalMoviesDB.count >= 30){
+//                 console.log('Вы киноман');
+//             }else { 
+//                 console.log("Errror");
+//             }
+//         },
+    
+//     showMyDB: function(hidden){
+//         if (!hidden){
+//             console.log(personalMoviesDB);
+//         }
+//     },
+
+//     toggleVisisbleMyDB: function(){
+//         personalMoviesDB.privat = !personalMoviesDB.privat;
+//     }, 
+
+//     writeYourGenres: function(){
+                   
+//         for (let i = 1; i <= 3; i++){
+//             while (personalMoviesDB.genres[i - 1] == '' || personalMoviesDB.genres[i - 1] == null || isNaN(personalMoviesDB.genres[i - 1] <= 0)){
+//                 personalMoviesDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);
+//             }  
+//         }
+
+//         personalMoviesDB.genres.forEach(function(value, i) {
+//             console.log(`Любимый жанр # ${i+1} -  это ${value}` );
+//         });
+//     }
+
+// };
+
+    // lesson37TASK13
+
+    // const shoppingMallData = {
+    //     shops: [
+    //         {
+    //             width: 10,
+    //             length: 5
+    //         },
+    //         {
+    //             width: 15,
+    //             length: 7
+    //         },
+    //         {
+    //             width: 20,
+    //             length: 5
+    //         },
+    //         {
+    //             width: 8,
+    //             length: 10
+    //         }
+    //     ],
+    //     height: 5,
+    //     moneyPer1m3: 30,
+    //     budget: 50000,
+       
+    // };
+
+    // function isBudgetEnough() {
+    //    let square = 0,
+    //         volume = 0;
+    //     shoppingMallData.shops.forEach(function(value){
+    //         square += value.width * value.length;
+    //     });
+    //     console.log(square);
+    //     volume = shoppingMallData.height * square;
+    
+    //     console.log(volume);
+    //     if (shoppingMallData.budget >= shoppingMallData.moneyPer1m3 *volume) {
+    //         console.log(`not enought budget`)
+    //     }else{
+    //         console.log(`Very good, enought budget`)
+    //     }
+    //     }
+    // isBudgetEnough();
+
+
+            // lesson37TASK14
+
+// const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Sam', 'ZAnussi'];
+
+// function sortStudentsByGroups(arr) {
+//         // console.log(students.sort().concat());
+
+//         let team1 = [students.sort().slice(0,3)];
+//         let team2 = [students.sort().slice(3, 6)];
+//         let team3 = [students.sort().slice(6, 9)];
+//         let losers = [students.sort().slice(9)];
+//         // console.log(team1);
+//         // console.log(team2);
+//         // console.log(losers);
+//         // let other = students.filter(function(value)
+//         // console.log(value !== [team1]));
+//         // delete students(1,2);
+//         // console.log(students[1,2]);
+
+//         console.log(`${team1}\n, ${team2}\n, ${team3}\n, ${losers}\n`);
+//         console.log(team1,team2,team3, losers);
+// }
+// sortStudentsByGroups(students);
+    
+
+    //lesson39 Динамическая типизация, изменение типов данных 
+    //to string
+
+// //1)
+// console.log(typeof(String(null)));
+
+// //2)
+// console.log(typeof(5 + ''));
+
+// const num = 5;
+
+// console.log("www\" = num);
+
+// const fontSize = 26 + "px';
+
+//     // to number
+//  //1) 
+//     console.log((typeof(+"5'));
+
+// //3)
+// console.log(typeof(parseInt('15px', 10)));
+
+// let answ = +prompt('Hello', "");
+
+//     //to boolean 
+//     // 1) 
+// // 0, '', null, undefined, Nan; // все это false 
+
+// let switcher = null;
+
+// if (switcher){
+//     console.log('Working');
+// }
+
+// switcher = -1; 
+
+// if (switcher){
+//     console.log('Working...');
+// }
+
+
+//     //2) способ
+// console.log(typeof(Boolean('4')));
+
+//    //3) способ 
+//    console.log(typeof(!!'444444'));
+
+    //lesson40 Замыкание и лексическое окружение 
+//  
+
+let counter = 0;
+function createCounter() {
+    
+    
+    const myFunction = function(){
+        counter = counter + 1;
+        return counter;
+    }
+    return myFunction;
+}
+
+const increment = createCounter();
+const c1 = increment();
+const c2 = increment();
+const c3 = increment();
+
+console.log(c1, c2,c3);
