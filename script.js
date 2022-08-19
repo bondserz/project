@@ -1353,20 +1353,114 @@
     //lesson40 Замыкание и лексическое окружение 
 //  
 
-let counter = 0;
-function createCounter() {
+// let counter = 0;
+// function createCounter() {
     
     
-    const myFunction = function(){
-        counter = counter + 1;
-        return counter;
+//     const myFunction = function(){
+//         counter = counter + 1;
+//         return counter;
+//     };
+//     return myFunction;
+// }
+
+// const increment = createCounter();
+// const c1 = increment();
+// const c2 = increment();
+// const c3 = increment();
+
+// console.log(c1, c2,c3);
+
+
+//     //lesson41
+// // console.log(typeof([ ] + false - null + true));
+
+// let y = 1;
+// let x = y = 2; 
+// console.log(x);//последовательное присваивание
+
+// console.log([] + 1 + 2);//[]- пустой массив это строка, 
+//                         //т.е. все что добавим в него будет строкой "12"
+
+// console.log( typeof("1"[0] ));// обращение к индексу массива - '1'
+
+// console.log(2 && 1 && null && 0 && undefined);//оператор && запинается на false
+
+// console.log(!!( 1 && 2 ) === (1 && 2));// !! ПРЕВРАЩАЕТ В БУЛИНН 
+
+// console.log( null || 2 && 3 || 4 );//оператор || запинается на true
+
+// a = [1, 2, 3]; 
+// b = [1, 2, 3]; 
+// console.log(a == b);//разные хранилища информацииб просто с одинаковыми данными
+
+// console.log( typeof(+"Infinity"));//изменяем тип данных со стоки на число 
+
+// console.log("Ёжик" > "яблоко");//строки можно сравнивать, будет посимвольное стравнение "Ё"> "Я" = false
+
+// console.log(0 || "" || 2 || undefined || true || falsе);// '||' запинается на true
+
+
+    //lesson_42_debugging
+
+    const restorantData = {
+        menu: [
+            {
+                name: 'Salad Caesar',
+                price: '14$'
+            },
+            {
+                name: 'Pizza Diavola',
+                price: '9$'
+            },
+            {
+                name: 'Beefsteak',
+                price: '17$'
+            },
+            {
+                name: 'Napoleon',
+                price: '7$'
+            }
+        ],
+        waitors: [
+            {name: 'Alice', age: 22}, {name: 'John', age: 24}
+        ],
+        averageLunchPrice: '20$',
+        openNow: true
+    };
+    
+    function isOpen(prop) {
+        let answer = '';
+        prop ?  answer = 'Открыто' : answer = 'Закрыто';
+    
+        return answer;
     }
-    return myFunction;
-}
+    
+    console.log(isOpen(restorantData));
+    
+    function isAverageLunchPriceTrue(fDish, sDish, average) {
+        console.log(+fDish.price.slice(0, -1,));
+        console.log(+sDish.price.slice(0, -1,));
+        if ((+fDish.price.slice(0, -1,-2)) + (+sDish.price.slice(0, -1,-2)) < +average.slice(0,-1)) {
+            return 'Цена ниже средней';
+        } else {
+            return 'Цена выше средней';
+        }
+        
+        
+    }
+    
+    console.log(isAverageLunchPriceTrue(restorantData.menu[0], restorantData.menu[1], restorantData.averageLunchPrice));
+    
+    function transferWaitors(data) {
+        const copy = Object.assign({}, data);
+    
+        copy.waitors = [{name: 'Mike', age: 32}];
+        return copy;
+    }
+    console.log(transferWaitors());
+    transferWaitors(restorantData);
+    console.log(restorantData.waitors);
 
-const increment = createCounter();
-const c1 = increment();
-const c2 = increment();
-const c3 = increment();
 
-console.log(c1, c2,c3);
+    console.log(0 && 1);
