@@ -1377,7 +1377,7 @@
 
 // let y = 1;
 // let x = y = 2; 
-// console.log(x);//последовательное присваивание
+// console.log(x);//последовательное присваивание, чтение конструкции слево на право
 
 // console.log([] + 1 + 2);//[]- пустой массив это строка, 
 //                         //т.е. все что добавим в него будет строкой "12"
@@ -1386,7 +1386,7 @@
 
 // console.log(2 && 1 && null && 0 && undefined);//оператор && запинается на false
 
-// console.log(!!( 1 && 2 ) === (1 && 2));// !! ПРЕВРАЩАЕТ В БУЛИНН 
+// console.log(!!( 1 && 2 ) == (1 && 2));// !! ПРЕВРАЩАЕТ В БУЛИАНН 
 
 // console.log( null || 2 && 3 || 4 );//оператор || запинается на true
 
@@ -1394,7 +1394,7 @@
 // b = [1, 2, 3]; 
 // console.log(a == b);//разные хранилища информацииб просто с одинаковыми данными
 
-// console.log( typeof(+"Infinity"));//изменяем тип данных со стоки на число 
+// console.log( typeof(+"Infinity"));//изменяем тип данных со строк на число 
 
 // console.log("Ёжик" > "яблоко");//строки можно сравнивать, будет посимвольное стравнение "Ё"> "Я" = false
 
@@ -1403,64 +1403,286 @@
 
     //lesson_42_debugging
 
-    const restorantData = {
-        menu: [
-            {
-                name: 'Salad Caesar',
-                price: '14$'
-            },
-            {
-                name: 'Pizza Diavola',
-                price: '9$'
-            },
-            {
-                name: 'Beefsteak',
-                price: '17$'
-            },
-            {
-                name: 'Napoleon',
-                price: '7$'
-            }
-        ],
-        waitors: [
-            {name: 'Alice', age: 22}, {name: 'John', age: 24}
-        ],
-        averageLunchPrice: '20$',
-        openNow: true
-    };
+    // const restorantData = {
+    //     menu: [
+    //         {
+    //             name: 'Salad Caesar',
+    //             price: '14$'
+    //         },
+    //         {
+    //             name: 'Pizza Diavola',
+    //             price: '9$'
+    //         },
+    //         {
+    //             name: 'Beefsteak',
+    //             price: '17$'
+    //         },
+    //         {
+    //             name: 'Napoleon',
+    //             price: '7$'
+    //         }
+    //     ],
+    //     waitors: [
+    //         {name: 'Alice', age: 22}, {name: 'John', age: 24}
+    //     ],
+    //     averageLunchPrice: '20$',
+    //     openNow: true
+    // };
     
-    function isOpen(prop) {
-        let answer = '';
-        prop ?  answer = 'Открыто' : answer = 'Закрыто';
+    // function isOpen(prop) {
+    //     let answer = '';
+    //     prop ?  answer = 'Открыто' : answer = 'Закрыто';
     
-        return answer;
-    }
+    //     return answer;
+    // }
     
-    console.log(isOpen(restorantData));
+    // console.log(isOpen(restorantData));
     
-    function isAverageLunchPriceTrue(fDish, sDish, average) {
-        console.log(+fDish.price.slice(0, -1,));
-        console.log(+sDish.price.slice(0, -1,));
-        if ((+fDish.price.slice(0, -1,-2)) + (+sDish.price.slice(0, -1,-2)) < +average.slice(0,-1)) {
-            return 'Цена ниже средней';
-        } else {
-            return 'Цена выше средней';
-        }
+    // function isAverageLunchPriceTrue(fDish, sDish, average) {
+    //     console.log(+fDish.price.slice(0, -1,));
+    //     console.log(+sDish.price.slice(0, -1,));
+    //     if ((+fDish.price.slice(0, -1,-2)) + (+sDish.price.slice(0, -1,-2)) < +average.slice(0,-1)) {
+    //         return 'Цена ниже средней';
+    //     } else {
+    //         return 'Цена выше средней';
+    //     }
         
         
-    }
+    // }
     
-    console.log(isAverageLunchPriceTrue(restorantData.menu[0], restorantData.menu[1], restorantData.averageLunchPrice));
+    // console.log(isAverageLunchPriceTrue(restorantData.menu[0], restorantData.menu[1], restorantData.averageLunchPrice));
     
-    function transferWaitors(data) {
-        const copy = Object.assign({}, data);
+    // function transferWaitors(data) {
+    //     const copy = Object.assign({}, data);
     
-        copy.waitors = [{name: 'Mike', age: 32}];
-        return copy;
-    }
-    console.log(transferWaitors());
-    transferWaitors(restorantData);
-    console.log(restorantData.waitors);
+    //     copy.waitors = [{name: 'Mike', age: 32}];
+    //     return copy;
+    // }
+    // console.log(transferWaitors());
+    // transferWaitors(restorantData);
+    // console.log(restorantData.waitors);
 
 
-    console.log(0 && 1);
+    // console.log(0 && 1);
+
+    //     //goittask_modul_1_task_27
+    // function getSubscriptionPrice(type) {
+    //     let price;
+    //     // Change code below this line
+      
+    //    switch (type) { // Change this line
+    //       case 'professional' : // Change this line
+    //         price = 20; // Change this line
+    //         break;
+    //         case 'organization' : // Change this line
+    //         price = 50; // Change this line
+    //         break;
+    //         case 'starter' : // Change this line
+    //         price = 0; // Change this line
+    //         break;
+      
+    //     //   case : // Change this line
+    //     //     price = ; // Change this line
+    //     //     break;
+      
+    //     //   case : // Change this line
+    //     //     price = ; // Change this line
+    //     //     break;
+    //     }
+      
+    //     // Change code above this line
+    //     return console.log(price);
+    //   }
+      
+    //   getSubscriptionPrice("professional");// повертає число 20
+    //    getSubscriptionPrice("organization");// повертає число 50
+    //    getSubscriptionPrice("starter");// повертає число 0
+
+
+  //goittask_modul_1_task_28
+
+    //    function checkPassword(password) {
+    //     const ADMIN_PASSWORD = "jqueryismyjam";
+    //     let message;
+    //     // Change code below this line
+      
+    //     // if (password === null) {
+    //     //   message = "Canceled by user!";
+    //     // } else if (password === ADMIN_PASSWORD) {
+    //     //   message = "Welcome!";
+    //     // } else {
+    //     //   message = "Access denied, wrong password!";
+    //     // }
+      
+    //     switch(password){
+ 
+    //         case null:
+    //             message = "Canceled by user!";
+    //             break;
+            
+    //         case 'jqueryismyjam':
+    //             message = "Welcome!";
+    //             break;
+    //         default:
+    //             message = "Access denied, wrong password!";
+
+    //     }
+    //     // Change code above this line
+    //     return console.log(message);
+
+
+    //    }
+        
+    //     checkPassword("mangohackzor");// повертає "Access denied, wrong password!"
+    //     checkPassword(null);// повертає "Canceled by user!"
+    //     checkPassword("polyhax");// повертає "Access denied, wrong password!"
+    //     checkPassword("jqueryismyjam");// повертає "Welcome!"
+
+          //goittask_modul_1_task_29
+
+// function getShippingCost(country) {
+// let message;
+// // Change code below this line
+// switch(country){
+//     case "Australia":
+//         message = "Shipping to Australia will cost 170 credits";
+//         break;
+//     case "Germany":
+//         message = "Sorry, there is no delivery to your country";
+//         break;
+//     case "China":
+//         message = "Shipping to China will cost 100 credits";
+//         break;
+//     case "Chile":
+//         message = "Shipping to Chile will cost 250 credits";
+//         break;
+//     case "Jamaica":
+//         message = "Shipping to Jamaica will cost 120 credits";
+//         break;
+//     case "Sweden":
+//         message = "Sorry, there is no delivery to your country";
+//         break;
+
+// }
+// // Change code above this line
+// return console.log(message);
+// }
+
+// getShippingCost("Australia");// повертає "Shipping to Australia will cost 170 credits"
+//  getShippingCost("Germany");// повертає "Sorry, there is no delivery to your country"
+//  getShippingCost("China");// повертає "Shipping to China will cost 100 credits"
+//  getShippingCost("Chile");// повертає "Shipping to Chile will cost 250 credits"
+//  getShippingCost("Jamaica");// повертає "Shipping to Jamaica will cost 120 credits"
+//  getShippingCost("Sweden");// повертає "Sorry, there is no delivery to your country"
+
+
+           //goittask_modul_1_task_30
+
+// function getNameLength(name) {
+// const message = `Name ${name} is ${name.length} characters long`; // Change this line
+
+// return console.log(message);
+// }
+// getNameLength("Poly");// повертає "Name Poly is 4 characters long"
+// getNameLength("Harambe");// повертає "Name Harambe is 6 characters long"
+// getNameLength("Billy");// повертає "Name Billy is 5 characters long"
+// getNameLength("Joe");// повертає "Name Joe is 3 characters long"
+
+           //goittask_modul_1_task_31
+
+// const courseTopic = "JavaScript essentials";
+// // Change code below this line
+
+// const courseTopicLength = courseTopic.length;
+// const firstElement = courseTopic[0];
+// const lastElement = courseTopic[courseTopic.length-1];
+
+// // Change code above this line
+
+// console.log(courseTopicLength);
+// console.log(firstElement);
+// console.log(lastElement);
+// // courseTopic - це рядок "JavaScript essentials"
+// // Оголошена змінна courseTopicLength
+// // Значення змінної courseTopicLength - це число 21
+// // Оголошена змінна firstElement
+// // Значення змінної firstElement - це рядок "J"
+// // Оголошена змінна lastElement
+// // Значення змінної lastElement - це рядок "s"
+
+           //goittask_modul_1_task_32
+
+// function getSubstring(string, length) {
+// const substring = string.slice(0, length); // Change this line
+
+// return console.log(substring);
+// }
+
+// getSubstring("Hello world", 3);// повертає "Hel"
+// getSubstring("Hello world", 6);// повертає "Hello"
+// getSubstring("Hello world", 8);// повертає "Hello wo"
+// getSubstring("Hello world", 11);// повертає "Hello world"
+// getSubstring("Hello world", 0);// повертає ""
+
+           //goittask_modul_1_task_33
+
+// function formatMessage(message, maxLength) {
+// let result;
+// // Change code below this line
+// result = message.length <= maxLength ? message : `${message.slice(0, maxLength)}...`;
+// /// Change code above this line
+// return console.log(result);
+// }
+
+// formatMessage("Curabitur ligula sapien", 16);// повертає "Curabitur ligula..."
+// formatMessage("Curabitur ligula sapien", 23);// повертає "Curabitur ligula sapien"
+// formatMessage("Vestibulum facilisis purus nec", 20);// повертає "Vestibulum facilisis..."
+// formatMessage("Vestibulum facilisis purus nec", 30);// повертає "Vestibulum facilisis purus nec"
+// formatMessage("Nunc sed turpis a felis in nunc fringilla", 15);// повертає "Nunc sed turpis..."
+// formatMessage("Nunc sed turpis a felis in nunc fringilla", 41);// повертає "Nunc sed turpis a felis in nunc fringilla"
+
+
+           //goittask_modul_1_task_34
+
+// function normalizeInput(input) {
+//     const normalizedInput = input.toLowerCase(); // Change this line
+  
+//     return console.log(normalizedInput);
+//   }
+  
+//   normalizeInput("Hello world");// повертає "hello world"
+//    normalizeInput("This ISN'T SpaM");// повертає "this isn't spam"
+//   normalizeInput("Big SALE");// повертає "big sale"
+
+           //goittask_modul_1_task_35
+
+// function checkForName(fullName, name) {
+// const result = fullName.includes(name); // Change this line
+//     return console.log(result);
+// }
+
+// checkForName("Egor Kolbasov", "Egor");// повертає true
+// checkForName("Egor Kolbasov", "egor");// повертає false
+// checkForName("Egor Kolbasov", "egOr");// повертає false
+// checkForName("Egor Kolbasov", "Zhenya");// повертає false
+// checkForName("Vadim Nekrasov", "Vadim");// повертає true
+// checkForName("Vadim Nekrasov", "vadim");// повертає false
+// checkForName("Vadim Nekrasov", "Dima");// повертає false
+
+           //goittask_modul_1_task_36
+
+function checkForSpam(message) {
+    let result;
+    // Change code below this line
+    let normalizedInput = message.toLowerCase();
+    result =   normalizedInput.includes('spam') || normalizedInput.includes('sale')  ;
+    // Change code above this line
+    return console.log(result);
+  }
+  checkForSpam("Latest technology news");// повертає false
+  checkForSpam("JavaScript weekly newsletter");//повертає false
+   checkForSpam("Get best sale offers now!");// повертає true
+   checkForSpam("Amazing SalE, only tonight!");// повертає true
+   checkForSpam("Trust me, this is not a spam message");// повертає true
+   checkForSpam("Get rid of sPaM emails. Our book in on sale!");// повертає true
+   checkForSpam("[SPAM] How to earn fast money?");// повертає true
