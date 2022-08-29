@@ -1671,18 +1671,285 @@
 
            //goittask_modul_1_task_36
 
-function checkForSpam(message) {
-    let result;
+// function checkForSpam(message) {
+//     let result;
+//     // Change code below this line
+//     let normalizedInput = message.toLowerCase();
+//     result =   normalizedInput.includes('spam') || normalizedInput.includes('sale')  ;
+//     // Change code above this line
+//     return console.log(result);
+//   }
+//   checkForSpam("Latest technology news");// повертає false
+//   checkForSpam("JavaScript weekly newsletter");//повертає false
+//    checkForSpam("Get best sale offers now!");// повертає true
+//    checkForSpam("Amazing SalE, only tonight!");// повертає true
+//    checkForSpam("Trust me, this is not a spam message");// повертає true
+//    checkForSpam("Get rid of sPaM emails. Our book in on sale!");// повертає true
+//    checkForSpam("[SPAM] How to earn fast money?");// повертає true
+
+           //goittask_modul_2_task_2
+           
+// function checkPassword(password) {
+//     const ADMIN_PASSWORD = "jqueryismyjam";
+//     // Change code below this line
+  
+    
+  
+//     if (password == ADMIN_PASSWORD) {
+//         return console.log("Welcome!");
+       
+//     } 
+  
+//     return console.log("Access denied, wrong password!");
+//     // Change code above this line
+//   }
+//   checkPassword("mangohackzor");// повертає "Access denied, wrong password!"
+//    checkPassword("polyhax");// повертає "Access denied, wrong password!"
+//    checkPassword("jqueryismyjam");// повертає "Welcome!"
+
+//            //goittask_modul_2_task_3
+
+// function checkStorage(available, ordered) {
+//     // Change code below this line
+    
+  
+//     if (ordered === 0) {
+//       return "Your order is empty!";
+//     }  if (ordered > available) {
+//       return "Your order is too large, not enough goods in stock!";
+//     } {
+//       return "The order is accepted, our manager will contact you";
+//     }
+  
+//     // return message;
+//     // Change code above this line
+//   }
+//   checkStorage(100, 50);// повертає "The order is accepted, our manager will contact you"
+//    checkStorage(100, 130);// повертає "Your order is too large, not enough goods in stock!"
+//    checkStorage(70, 0);// повертає "Your order is empty!"
+//    checkStorage(200, 20);// повертає "The order is accepted, our manager will contact you"
+//    checkStorage(200, 250) ;//повертає "Your order is too large, not enough goods in stock!"
+  
+            //goittask_modul_2_task_4      
+            // const fruits = ["apple", "peach", "pear", "banana"];
+
+            // // Change code below this line
+            
+            // const lastElementIndex = fruits.length - 1;
+            // const lastElement= fruits[lastElementIndex];
+
+            // console.log(lastElementIndex);
+            // console.log(lastElement);
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//             function getExtremeElements(array) {
+//                 // Change code below this line
+   
+//                 return  console.log(array[0],array[array.length-1]);
+              
+//                 // Change code above this line
+//               }
+              
+//               getExtremeElements([1, 2, 3, 4, 5]);// повертає [1, 5]
+//                getExtremeElements(["Earth", "Mars", "Venus"]);// повертає ["Earth", "Venus"]
+//                getExtremeElements(["apple", "peach", "pear", "banana"]);// повертає ["apple", "banana"]
+// //goittask_modul_2_task_6~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                // function splitMessage(message, delimeter) {
+                //     let words;
+                //     // Change code below this line
+                //     words = message.split(delimeter);
+                //     // Change code above this line
+                //     return words;
+                //   }
+                
+                //   splitMessage("Mango hurries to the train", " ");// повертає ["Mango", "hurries", "to", "the", "train"]
+                //    splitMessage("Mango", "");// повертає ["M", "a", "n", "g", "o"]
+                //    splitMessage("best_for_week", "_") ;//повертає ["best", "for", "week"]
+
+//goittask_modul_2_task_11~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// function calculateEngravingPrice(message, pricePerWord) {
+//     // Change code below this line
+//     return console.log(message.split('i'));
+//     (message.split(' ').length * pricePerWord);
+//     // ((a.length * pricePerWord)/5);
+    
+    
+//     // Change code above this line
+//     }
+    
+//     calculateEngravingPrice("JavaScript is in my blood", 10);// повертає 50
+//     calculateEngravingPrice("JavaScript is in my blood", 20);// повертає 100
+//     calculateEngravingPrice("Web-development is creative work", 40) ;//повертає 160
+//     calculateEngravingPrice("Web-development is creative work", 20) ;//повертає 80
+
+//goittask_modul_2_task_12~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// function makeStringFromArray(array, delimeter) {
+//     let string;
+// // Change code below this line
+//     return array.join(delimeter);
+
+
+// // Change code above this line
+//     return string;
+//     }
+
+// makeStringFromArray(["Mango", "hurries", "to", "the", "train"], " ");// повертає "Mango hurries to the train"
+// makeStringFromArray(["M", "a", "n", "g", "o"], "") ;// повертає "Mango"
+// makeStringFromArray(["top", "picks", "for", "you"], "_");// повертає "top_picks_for_you"
+
+//goittask_modul_2_task_13~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// function slugify(title) {
     // Change code below this line
-    let normalizedInput = message.toLowerCase();
-    result =   normalizedInput.includes('spam') || normalizedInput.includes('sale')  ;
+  
+//   return console.log(title.replaceAll(" ","-").toLowerCase());
     // Change code above this line
-    return console.log(result);
-  }
-  checkForSpam("Latest technology news");// повертає false
-  checkForSpam("JavaScript weekly newsletter");//повертає false
-   checkForSpam("Get best sale offers now!");// повертає true
-   checkForSpam("Amazing SalE, only tonight!");// повертає true
-   checkForSpam("Trust me, this is not a spam message");// повертає true
-   checkForSpam("Get rid of sPaM emails. Our book in on sale!");// повертає true
-   checkForSpam("[SPAM] How to earn fast money?");// повертає true
+// //   }
+//   slugify("Arrays for begginers");// повертає "arrays-for-begginers"
+//    slugify("English for developer");// повертає "english-for-developer"
+//    slugify("Ten secrets of JavaScript");// повертає "ten-secrets-of-javascript"
+//    slugify("How to become a JUNIOR developer in TWO WEEKS");// повертає "how-to-become-a-junior-developer-in-two-weeks"
+//goittask_modul_2_task_15~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//    const oldClients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
+// const newClients = ['Peach', 'Houston'];
+
+// const allClients = oldClients.concat(newClients); // Change this line
+
+// console.log(allClients);
+
+//goittask_modul_2_task_16~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// function makeArray(firstArray, secondArray, maxLength) {
+//     // Change code below this line
+//     return console.log(firstArray.concat(secondArray).slice(0, maxLength));
+
+
+//     // Change code above this line
+//   }
+// makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3) ;//повертає ["Mango", "Poly", "Ajax"]
+//  makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4) ;//повертає ["Mango", "Poly", "Houston", "Ajax"]
+//  makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3) ;//повертає ["Mango", "Ajax", "Chelsea"]
+//  makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2) ;//повертає ["Earth", "Jupiter"]
+//  makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4) ;//повертає ["Earth", "Jupiter", "Neptune", "Uranus"]
+//  makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0);// повертає []
+// //  функції makeArray() з випадковими масивами і випадковим числом повертає правильний масив
+
+//goittask_modul_2_task_16~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// const fruits = ['apple', 'plum', 'pear', 'orange'];
+
+// for (let i = 0; i < fruits.length; i+=1) { // Change this line
+//   const fruit = fruits[i]; // Change this line
+//   console.log(fruit);
+// }
+//goittask_modul_2_task_16~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// function calculateTotalPrice(order) {
+//     let total = 0;
+//     // Change code below this line
+//     for (let i = 0; i < order.length; i+= 1)  {
+//      total +=order[i]; 
+//       }
+//     // Change code above this line
+//     return total;
+//   }
+//   calculateTotalPrice([12, 85, 37, 4]);// повертає 138
+//     calculateTotalPrice([164, 48, 291]);// повертає 503
+//     calculateTotalPrice([412, 371, 94, 63, 176]) ;//повертає 1116
+//     calculateTotalPrice();// з випадковим масивом повертає правильне значення
+
+//goittask_modul_2_task_19~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+// function findLongestWord(string) {
+//   // Change code below this line
+//   const words = string.split(' ');
+//   let longWord = words[0];
+//   for (const word of words) {
+//     if (longWord.length < word.length) {
+//       longWord = word;
+//     }
+//   }
+// //   return longWord
+      
+//       console.log(longWord);
+      
+//         // Change code above this line
+//       }
+      
+//       findLongestWord("The quick brown fox jumped over the lazy dog");// повертає jumped
+//      findLongestWord("May the force be with you");// повертає force
+//     //   Виклик функції findLongestWord() з випадковим рядком повертає правильне значення
+  
+    //goittask_modul_2_task_19~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   
+    // function createArrayOfNumbers(min, max) {
+    //     const numbers = [];
+    //     // Change code below this line
+    //   for ( let i = min; i <= max; i +=1){
+    //      numbers.push(i);
+    //   }
+    //     // Change code above this line
+    //     // return numbers;
+    //     return console.log(numbers);
+    //   }
+      
+    //   createArrayOfNumbers(1, 3);// повертає [1, 2, 3]
+    //    createArrayOfNumbers(14, 17);// повертає [14, 15, 16, 17]
+    //   createArrayOfNumbers(29, 34) ;//повертає [29, 30, 31, 32, 33, 34]
+
+    //goittask_modul_2_task_21~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ФІЛЬТРАЦИЯ МАССИВА ЧИСЕЛ
+
+
+//       function filterArray(numbers, value) {
+//         // Change code below this line
+        
+//         let arr = [];
+//         for (let number of numbers){
+//             if(number > value){
+//                 arr.push(number);
+//             }
+//         }
+//        return  console.log(arr);   
+     
+//        // Change code above this line
+//      }
+//      filterArray([1, 2, 3, 4, 5], 3);// повертає [4, 5]
+//      filterArray([1, 2, 3, 4, 5], 4);// повертає [5]
+//  filterArray([1, 2, 3, 4, 5], 5) ;//повертає []
+//  filterArray([12, 24, 8, 41, 76], 38) ;//повертає [41, 76]
+//  filterArray([12, 24, 8, 41, 76], 20) ;//повертає [24, 41, 76]
+
+     //goittask_modul_2_task_22~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~МЕТОД INCLUDES()
+
+    //  function checkFruit(fruit) {
+    //     const fruits = ["apple", "plum", "pear", "orange"];
+      
+    //     return fruits.includes(fruit); // Change this line
+    //   }
+      
+    //   checkFruit("plum");// повертає true
+    //    checkFruit("mandarin") ;//повертає false
+    //    checkFruit("pear");// повертає true
+    //    checkFruit("Pear");// повертає false
+    //    checkFruit("apple") ;//повертає true
+
+         //goittask_modul_2_task_23~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ОБЩИЕ ЭЛЕМЕНТЫ
+         function getCommonElements(array1, array2) {
+            // Change code below this line
+            let arr = [];
+            for(let i = 0; i < array1.length; i+=1){
+                if (array2.includes(array1[i])){
+                    return console.log(arr);
+                }
+             
+
+            }
+                
+            
+
+        //   return console.log(push.[array1.includes(array2)]);
+          
+          
+           // Change code above this line
+          }
+          getCommonElements([1, 2, 3], [2, 4]);// повертає [2]
