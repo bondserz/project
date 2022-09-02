@@ -1933,23 +1933,497 @@
     //    checkFruit("Pear");// повертає false
     //    checkFruit("apple") ;//повертає true
 
-         //goittask_modul_2_task_23~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ОБЩИЕ ЭЛЕМЕНТЫ
-         function getCommonElements(array1, array2) {
-            // Change code below this line
-            let arr = [];
-            for(let i = 0; i < array1.length; i+=1){
-                if (array2.includes(array1[i])){
-                    return console.log(arr);
-                }
-             
-
-            }
-                
+        //  //goittask_modul_2_task_23~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ОБЩИЕ ЭЛЕМЕНТЫ
+        //  function getCommonElements(array1, array2) {
+        //     // Change code below this line
+        //     let arr = [];
+        //     for(let i = 0; i < array1.length; i+=1){
+        //         if (array2.includes(array1[i])){
+        //             arr.push(array1[i]);
+        //         }
+        //     }
             
+        //     return console.log(arr);
+        //    // Change code above this line
+        //   }
+        //   getCommonElements([1, 2, 3], [2, 4]);// повертає [2]
 
-        //   return console.log(push.[array1.includes(array2)]);
+//goittask_modul_2_task_24~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ЦИКЛ FOR...OF сумма элементов массива
+
+// function calculateTotalPrice(order) {
+//     let total = 0;
+//     // Change code below this line
+  
+//     for (let value of order) {
+//       total +=value;
+//     }
+  
+//     // Change code above this line
+//     return total;
+//     console.log(total);
+//   }
+  
+// calculateTotalPrice([12, 85, 37, 4]);// повертає 138
+// calculateTotalPrice([164, 48, 291]);// повертає 503
+// calculateTotalPrice([412, 371, 94, 63, 176]);//повертає 1116
+// calculateTotalPrice([]);// повертає 0
+// calculateTotalPrice() ;//з випадковим масивом чисел повертає правильну суму
+
+//goittask_modul_2_task_25~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ФІЛЬТРАЦия МАССИВА ЧИСЕЛ 2.0
+
+// function filterArray(numbers, value) {
+//     // Change code below this line
+//     const filteredNumbers = [];
+  
+//     for (let number of numbers) {
+//     //   const number = val;
+  
+//       if (number > value) {
+//         filteredNumbers.push(number);
+//       }
+//     }
+  
+//     // return filteredNumbers;
+//     return console.log(filteredNumbers);
+//     // Change code above this line
+//   }
+//   filterArray([1, 2, 3, 4, 5], 3) ;// [4, 5]
+
+//goittask_modul_2_task_25~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ОПЕРАТОР %
+// операція за модулем (%) повертає цілочисельну остачу від ділення двох чисел - діленого і дільника.
+
+// const a = 3 % 1;
+// const b = 4 % 3;
+// const c = 11 % 4;
+// const d = 12 % 7;
+// const e = 8 % 6;
+// console.log(a, b, c, d, c);
+
+//goittask_modul_2_task_27~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ПАРНЫЕ ЧИСЛА
+
+// function getEvenNumbers(start, end) {
+//     // Change code below this line
+//     let filteredNumbers = [];
+  
+//     for (let i  = start; i <= end; i +=1) {
+//           if (i % 2 === 0 ) {
+//         filteredNumbers.push(i);
+//       }
+//     }
+//     return  console.log(filteredNumbers);
+ 
+//      // Change code above this line
+//    }
+//  getEvenNumbers(2, 5);// повертає [2, 4]
+
+ //goittask_modul_2_task_28~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ОПЕРАТОР BREAK
+//  оператор break, який повністю припиняє виконання циклу і передає управління на рядок за його тілом.
+
+// У прикладі шукаємо число що ділеться на 5 без залишку. Щойно виконається умова if, цикл припинить своє виконання (буде перерваний).
+
+// const start = 6;
+// const end = 27;
+// let number;
+
+// for (let i = start; i < end; i += 1) {
+//   if (i % 5 === 0) {
+//     number = i;
+//       console.log(i);
+//     // break;
+ 
+//   }
+// }
+
+ //goittask_modul_2_task_29~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ОПЕРАТОР BREAK VS RETURN
+
+
+//  function findNumber(start, end, divisor) {
+//     // Change code below this line
+  
+  
+//       for (let i = start; i < end; i += 1) {
           
+//         if (i % divisor === 0) {
+//           return  i;
+//       }
+//     }
+//      // Change code above this line
+//   }
+//   const result = findNumber();
+//   console.log(result);
+//   findNumber(2, 6, 5) ;//повертає 5
+
+// findNumber(2, 6, 5) ;//повертає 5
+//   findNumber(8, 17, 3);// повертає 9
+//  findNumber(6, 9, 4) ;//повертає 8
+//  findNumber(16, 35, 7);// повертає 21
+
+ //goittask_modul_2_task_30~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ФУНКЦІЯ INCLUDES()
+
+//  function includes(array, value) {
+//     // Change code below this line
+//     for (let val of array){
+//          if (val === value){
+//             return console.log(true);
+//         }
+//     }
+  
+//       return console.log(false);
+
+
+// //   return console.log(includes.includes(value));
+  
+//     // Change code above this line
+//   }
+//   includes([1, 2, 3, 4, 5], 3);// повертає true
+//    includes([1, 2, 3, 4, 5], 17) ;//повертає false
+//    includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter");// повертає true
+//    includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus") ;//повертає false
+//    includes(["apple", "plum", "pear", "orange"], "plum") ;//повертає true
+//    includes(["apple", "plum", "pear", "orange"], "kiwi") ;//повертає false
+//    includes();//для випадкового масиву з випадковим value повертає правильний boolean
+//   // У функції includes використовується for, return, але не метод масиву includes
+
+ //goittask_modul_2_task_31~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ЦИКЛ  FOR
+//  const start = 3;
+// const end = 7;
+
+// for (let i = start; i <= end; i += 1) { // Change this line
+//   console.log(i);
+// }
+ //goittask_modul_2_task_32~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~сумма всех чисел до
+
+// function calculateTotal(number) {
+//     // Change code below this line
+//     let result = 0;
+//     for (let i = 0; i <= number; i += 1){
+//         result  +=i;
+//     }
+//     console.log(result);
+   
+//      // Change code above this line
+//    }
+
+// calculateTotal(24);// повертає 300
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+// function findLongestWord(string) {
+//   // Change code below this line
+//   const words = string.split(' ');
+//   let longWord = words[0];
+//   for (const word of words) {
+//     if (longWord.length < word.length) {
+//       longWord = word;
+//     }
+//   }
+// //   return longWord
+      
+//       console.log(longWord);
+  
+  
+// ~~~~~~~~~~~~~~~~~~~~~~~~
+
+//   function getSum(numbers) {
+//     // Change code below this line
+//     let total = 0;
+//         // Change code below this line
+      
+//         for (let value of numbers) {
+//           total +=value;
+//         }
+//     console.log(total);
+// }
+// getSum([1, 2, 3]);// === 6
+// getSum([1.2, 2.8, 3]);// === 7
+// getSum([-7, 2, 3]);// === -2
+// getSum([1.3, 4.1, 10.6, -4.7]);
+//~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+// function calculateAverageCountryPopulation(populations) {
+// //     // write code here
+//          populations = [42000000, 9500000, 3500000, 8400000];
+//         let total = 0;
+//         let average = 0;
+  
+    
+//       for (let value of populations) {
+//         total +=value;
+//       }
+//       average = total / populations.length;
+    
+    
+//       console.log(average);
+//   }
+  
+//   calculateAverageCountryPopulation();
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//   function hasNoneLetters(phrase, blacklist) {
+//     // write code here
+//     if (phrase.toLowerCase().includes(blacklist)){
+//         return console.log(false);
+//     }else{
+//         return console.log(true);
+// //     }
+// //   return console.log(phrase.toLowerCase().includes(blacklist));
+// //     return false;
+//   } }
+// //   Напиши функцию hasNoneLetters, которая принимает две строки phrase и blacklist и возвращает true,
+// //  если phrase не содержит ни одной буквы из blacklist, иначе false.
+  
+// //   Сравнение должно быть без учета регистра, то есть x в blacklist запрещает также использовать и X.
+  
+// //   Примеры:
+  
+//   hasNoneLetters('Mate Academy', 'pqrs');// === true;
+//   hasNoneLetters('ABC', 'a');// === false;
+  
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//   function getLongestString(strings) {
+//     // write code here
+//     for (let value of strings){
+//       if(value.length > strings.length ){
+//         console.log(value);
+//      }
+//     }
+//   }
+  
+// //   getLongestString(['One', 'two', 'three', 'four']);// === 'three'
+// getLongestString(['One', 'two', 'six']);// === 'One'
+
+//~~~~~~~~~~~~~~~~~~~~~
+
+
+// function findSmallestElement(numbers) {
+//         let number;
+
+//         for (let i = 0; i < numbers.length; i +=1){
+//             if (numbers[i] < numbers[0]){
+//                 number = numbers[i] ;
+//              }
+//         console.log(number);
+//       }
+//     }
+//     findSmallestElement([5, 2, 8, 12, 6]); 
+
+//~~~~~~~~~~~~~~~~
+
+    // function findSmallestElement(numbers) {
+    //     let number;
+    //     number = Math.min.apply(null, numbers);
+        
+    //     console.log(number);
+      
+    // }
+    // findSmallestElement([5, 2, 8, 12, 6]); 
+
+
+//     function getSum(numbers) {
+//         // Change code below this line
+//         let total = 0;
+//             // Change code below this line
           
-           // Change code above this line
-          }
-          getCommonElements([1, 2, 3], [2, 4]);// повертає [2]
+//             for (let value of numbers) {
+//               total +=value;
+    
+//             }
+//         console.log(total);
+//     }
+//     getSum([1, 2, 3]);// === 6
+// getSum([1.2, 2.8, 3]);// === 7
+// getSum([-7, 2, 3]) ;//=== -2
+
+
+
+
+// function getLargestExpressionResultOfThree(a, b) 
+//     {
+//         let result = a + b;
+//         if (result < a - b) {
+//           result = a - b
+//         } 
+//         if (result < a * b) {
+//           result = a * b
+//         }
+//         if (result < a / b) {
+//           result = a / b
+//         }
+//         console.log(result);
+//       }
+ 
+//   getLargestExpressionResultOfThree(-2, -34);
+  
+
+
+// function printNumbersBackwards(N){
+//     for(let i = N; i >= 1; i--){
+//         console.log(i)
+//     }
+// };
+  
+//   printNumbersBackwards(9);
+
+
+// function getDrinks(numberOfGuests) {
+//     // write code here
+//     let result =0 ;
+//     if (numberOfGuests === 0){
+//         return result;
+//     }else{
+//         for(let i = 0; i <= numberOfGuests; i++){
+//              result += i; 
+//         }
+//     }
+//     console.log(result);
+//    }
+//   getDrinks(5);
+
+
+// function getDrinksWithStep(numberOfGuests, step) {
+//     // write code here
+//     let sum =0 ;
+//         if (numberOfGuests === 0){
+//             return sum;
+//         }else{ 
+//             for (let i = 1; i <= numberOfGuests; i +=step){
+//                 console.log(sum += i);
+//             }
+
+//             console.log(sum);
+//   }
+  
+// }
+//   getDrinksWithStep(10, 3);
+
+// function calculateProfit(amount, percent, period){
+//     // write code here
+//     let total = amount;
+//     if (amount === 0){
+//         return total;
+//   }else{
+//     for(let i = 0; i <= period; i ++){
+//         total = total *percent/100;
+//         // console.log(total = amount + percent/100);
+//     }
+   
+//     console.log(total);
+
+//   }
+// }
+//   calculateProfit(1000, 5, 1);
+
+
+//   const string = 'banana';
+
+// for (const val of string) {
+//   console.log(val);
+// }
+
+// function isSubstring(phrase, part) {
+//     // write code here  
+//     console.log(phrase.includes(part));
+      
+  
+//   }
+//   isSubstring('string', 'ry');
+
+
+// function countMs(text){
+//     // write code here
+//     let sum = 0;
+  
+//       for(let letterM of text){       
+//           if (letterM === "m" || letterM === "M"){
+//               sum = sum + 1;
+//           }
+//         }
+//       console.log(sum);
+//   }
+//   countMs('doMMcument');
+  
+  
+
+//   function removeVowels(doc){
+//     // write code here
+//     let result = ''; 
+//     for (const letter of doc) { 
+
+//      if (!'aeiouy'.includes(letter).toLocaleLowerCase()){ 
+//        result += letter; 
+//      } 
+//    } 
+//      console.log(result); 
+// }
+  
+//   removeVowels('document'); // 'dcmnt'
+//   removeVowels('I like my boss'); // ' lk m bss'
+//   removeVowels('350 euro'); // '350 r'
+
+
+
+//   function makeAbbr(words) {
+//     // write code here
+//     let abrr = words[0];
+//     for(let i = 1; i < words.length; i++){
+//         if (words[i] == " "){
+//             abrr = abrr + words[i+1];
+//         }
+
+//     }
+//     console.log(typeof(abrr.toUpperCase()));
+//   }
+//   makeAbbr('national aeronautics space administration');
+
+  
+//   function decryptMessage(message) {
+//     // write code here
+//     let result = '';
+//     for (let i = 0; i < message.length; i--){
+//         result = message[i]+result;
+//     }
+//     console.log(result);
+//   }
+// decryptMessage('!!!reeb gniknird ekil eW');
+
+
+
+// function getSuccessRate(statistic){
+//     // write code here
+//     let result = 0;
+//     let understand = 0;
+//     if(statistic == " "){
+//         return result;
+//     }else
+//         for(let num of statistic){
+//             if(num == 1){
+//                 understand +=num;
+//             }
+//         }
+    
+    
+//   }
+  
+// getSuccessRate('11100'); // 60
+// getSuccessRate('1100'); // 50
+// getSuccessRate('000000'); // 0
+// getSuccessRate('11111'); // 100
+// getSuccessRate(''); // 0
+
+
+function createArray(N) {
+    // write code here
+    let numbers = [];
+    for (let i = 1; i <= N; i++){
+        numbers.push(i);
+       
+    }
+    console.log(numbers);
+    
+  }
+  createArray(8);
